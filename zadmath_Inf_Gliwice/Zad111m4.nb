@@ -1,0 +1,301 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      9041,        291]
+NotebookOptionsPosition[      8084,        253]
+NotebookOutlinePosition[      8534,        271]
+CellTagsIndexPosition[      8491,        268]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[TextData[{
+ StyleBox["Wprowadzenie wzorow na sile odsrodkowa \"",
+  FontColor->RGBColor[0, 0, 1]],
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["F", "od"], TraditionalForm]],
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["\"  i sile grawitacji \"",
+  FontColor->RGBColor[0, 0, 1]],
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["F", "g"], TraditionalForm]],
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["\".",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["\n",
+  FontColor->RGBColor[0, 0, 1]]
+}], "Subsection"],
+
+Cell[BoxData[{
+ FormBox[
+  RowBox[{
+   RowBox[{"ClearAll", "[", "\"\<Global`*\>\"", "]"}], ";"}], 
+  TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+   RowBox[{"Fod", "=", 
+    FractionBox[
+     RowBox[{"m", "\[Times]", 
+      SuperscriptBox["v", "2"]}], "R"]}], ";"}], 
+  TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+   RowBox[{"Fg", "=", 
+    RowBox[{"m", "\[Times]", "g"}]}], ";"}], TraditionalForm]}], "Input"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ StyleBox["Wprowadzenie wzorow na energie potencjalne wozka w punkcie startu \
+\"",
+  FontColor->RGBColor[0, 0, 1]],
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["E", "p1"], TraditionalForm]],
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["\"  i w najwyzszym punkcie petli \"",
+  FontColor->RGBColor[0, 0, 1]],
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["E", "p2"], TraditionalForm]],
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["\" \noraz na energie kinetyczna wozka w najwyzszym punkcie petli \
+\"",
+  FontColor->RGBColor[0, 0, 1]],
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["E", "k2"], TraditionalForm]],
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["\". Symbol \"m\" oznacza mase wozka wraz z pasazerami, \"g\" - \
+przyspieszenie ziemskie, \"v\" - predkosc wozka.",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["\n",
+  FontColor->RGBColor[0, 0, 1]]
+}], "Subsection"],
+
+Cell[BoxData[{
+ FormBox[
+  RowBox[{
+   RowBox[{"Ep1", "=", 
+    RowBox[{"m", "\[Times]", "g", "\[Times]", "H"}]}], ";"}], 
+  TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+   RowBox[{"Ep2", "=", 
+    RowBox[{"m", "\[Times]", "g", "\[Times]", 
+     RowBox[{"(", 
+      RowBox[{"2", "\[Times]", "R"}], ")"}]}]}], ";"}], 
+  TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+   RowBox[{"Ek2", "=", 
+    FractionBox[
+     RowBox[{"m", "\[Times]", 
+      SuperscriptBox["v", "2"]}], "2"]}], ";"}], TraditionalForm]}], "Input",
+ CellChangeTimes->{{3.6881123220303273`*^9, 3.688112324167527*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ StyleBox["Rozwiazanie ukladu rownan bedacych matematycznym zapisem rownosci \
+sily odsrodkowej i sily przyciagania ziemskiego w najwyzszym punkcie petli \
+oraz zasady zachowania energii.",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["\n",
+  FontColor->RGBColor[0, 0, 1]]
+}], "Subsection"],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.6881123997797275`*^9, 3.6881124019067273`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"r1", "=", 
+   RowBox[{"Solve", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"Fod", "==", "Fg"}], ",", " ", 
+       RowBox[{
+        RowBox[{"Ep1", "-", "Ep2"}], "==", "Ek2"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"H", ",", "v"}], "}"}]}], "]"}]}], TraditionalForm]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"H", "\[Rule]", 
+      FractionBox[
+       RowBox[{"5", " ", "R"}], "2"]}], ",", 
+     RowBox[{"v", "\[Rule]", 
+      RowBox[{
+       RowBox[{"-", 
+        SqrtBox["g"]}], " ", 
+       SqrtBox["R"]}]}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"H", "\[Rule]", 
+      FractionBox[
+       RowBox[{"5", " ", "R"}], "2"]}], ",", 
+     RowBox[{"v", "\[Rule]", 
+      RowBox[{
+       SqrtBox["g"], " ", 
+       SqrtBox["R"]}]}]}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.7191227590107965`*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[StyleBox["Sporzadzenie wykresu obrazujacego zaleznosc  \
+wymaganej wysokosci zjezdzalni \"H\" od promienia petli \"R\".",
+ FontColor->RGBColor[0, 0, 1]]], "Subsection"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"Plot", "[", 
+   RowBox[{
+    RowBox[{"H", "/.", 
+     RowBox[{"r1", "[", 
+      RowBox[{"[", 
+       RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ",", 
+    RowBox[{"{", 
+     RowBox[{"R", ",", "5", ",", "10"}], "}"}], ",", "\[IndentingNewLine]", 
+    RowBox[{"TextStyle", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"FontFamily", "\[Rule]", "\"\<Times\>\""}], ",", 
+       RowBox[{"FontSlant", "\[Rule]", "\"\<Italic\>\""}], ",", 
+       RowBox[{"FontSize", "\[Rule]", "12"}]}], "}"}]}], ",", 
+    "\[IndentingNewLine]", " ", 
+    RowBox[{"PlotStyle", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"RGBColor", "[", 
+         RowBox[{"1", ",", "0", ",", "0"}], "]"}], ",", 
+        RowBox[{"Thickness", "[", "0.006", "]"}]}], "}"}], "}"}]}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"AxesLabel", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{"\"\<R [m]\>\"", ",", "\"\<H [m]\>\""}], "}"}]}]}], "]"}], 
+  TraditionalForm]], "Input",
+ CellChangeTimes->{3.620567261217936*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{{}, {}, 
+   {RGBColor[1, 0, 0], Thickness[0.006], LineBox[CompressedData["
+1:eJwVz3k01AkAB/CZhGqdu2MaR2Z+firjyswwfqsX366hNmfbOrY2rFnNKF3S
+K6RnrdrdNscgjVCvsLVPLFaNjQ5sF0IpY5EQOtToZJphZ//4vu/7vvf950NE
+7wwRz6HRaP66/N+rjJQGNBoDIYGZ82g0LkxuJOjn0BnIedOZ8YHOhXK/2Vx7
+PQbu5TH0J/S42DXsS/czYGBD30l6ryEXJfV1nzKNGPCVnFPXmHKh2ZarYlsy
+sPxHxctYNhd1LYG9PnwG7C8Nd9zz5sIp9Z+K1BgGPthSJ0tSuDjk3/fD3k4G
+BiJl6NB3xMcvim67elrgfdjcZHW6I0KL+QEv5BaYWHuVKKM7gUhXjVgbMsEt
+dR4YOuoE8+jwxYztTOTVV7paGjojrvD5/sNKJkSrnuYNZjqjoiDo5cSahehp
+jInlMl1gcTxqAXl+IeST061xMheMDci9Wi1YOJO/cp2PtSseL01lrEhi4dFk
+cbiR3BWN7pRZ5QALr1aKHkQwl8GwyNI2b70l1s09LfYqWoZEbWn3qkpLSBuP
+tPxs7IYgRURJjI0VumoKhhuD3WD+5cgvR45Y4Y+z7XW1uW6YqmJx9rywQmG8
+6ddL77thXfq+mx2h1ri453zyEJOHa4EprI9XrNETHLDT6hseziRWJGU72mCx
+dMOEXM6DNKqa5pJvg6HknZy+fh7C10Qvy1Lb4LK0aJHcho/qNK9dsbGLUJlt
+X3Y6kg+eoiHCoG0RrsrqpsjTfJyosYgtc7OFd9YO2rYBPmLn5/9Uf8oWgy0p
+sneEAFtCr/vn09mQPyxQaSMFaKBZOIzGs5HIMVYGlgqgH7/C3rOXjaaYssTo
+cQHqJfOeLmVz4JC+fmByiTuWrDdYGb+Jg6o+387bUneUlil3s45yEGAWdNz2
+gjtY4hOCJgUH33mn0NzH3YFgyUz5aw6ySvVmsp08kKQwK1YRBHrHclu2Sz0Q
+F9gq2htGQPR9Kivrogfio7Y0h/9K4I4iwcPtlQdiunu60ECgYUGmYbazEKb7
+tz2Pekvgfu4csdcuIdpy2x6OLrYDTX34WGSlEBgUtZZutkNQQZjPvbdClP92
+IUScYwdz3qbyGaEniEvDFUeb7fDs3GblhX2eCDLhfT6qtsNIcEN+icITOU82
+flXuQuKD0sHWfNoTt5hRFpKtJA5uVkSs9qRQcyBtPCaPBId11q7xIIU/ww5k
+Nd8k0X/xRO1fCgrC69xDpbdIpPNq+9vrKdRze+MybpNwqO0wGP+bQrPay9fv
+Lol9ivnhVo0UHp7SaO+2kzBqTtIeukFBM5gad7+bxHLlVpHfXQp+kgzR0DAJ
+uZ5DT28fhbZOoXvTCAlkrKG/66cQ4jVGnHtKYnRelKPxYwrffuanFY+R4JvI
+k32eUIivmF/77DmJOywj3Y9C7uQxYnKSxLSLSrLjFQXLiBWmXW9IlFQZyTJe
+Uyi+MaGpfktCJOBeKVFRKJcF9CS8J5FNRZt0vdF5PMwyp6Z0ntUPqoUfKXgX
+X0tWTpNob1H9GzhFoclgt7ReTSLBz1hfMk2h9VHn2mQNiav+otDCTxSCkSbY
+oiUh7og+XKvR+X/nE94zOv/G1PNtWgoR5sMm7FkSVd2FXaMzFB4fkGlmdTs0
+7PKn2VkK/wE5kBiw
+     "]]}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->True,
+  AxesLabel->{
+    FormBox["\"R [m]\"", TraditionalForm], 
+    FormBox["\"H [m]\"", TraditionalForm]},
+  AxesOrigin->{5., 12.5},
+  BaseStyle->{FontFamily -> "Times", FontSlant -> "Italic", FontSize -> 12},
+  PlotRange->{{5, 10}, {12.50000025510204, 24.99999974489796}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{
+    Scaled[0.02], 
+    Scaled[0.02]}]], "Output",
+ CellChangeTimes->{3.7191227591667967`*^9}]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1264, 889},
+WindowMargins->{{36, Automatic}, {Automatic, -14}},
+DockedCells->FEPrivate`FrontEndResource[
+ "FEExpressions", "CompatibilityToolbar"],
+Magnification->1.25,
+FrontEndVersion->"8.0 for Microsoft Windows (64-bit) (October 6, 2011)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 501, 17, 72, "Subsection"],
+Cell[1083, 41, 447, 15, 114, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1567, 61, 874, 26, 116, "Subsection"],
+Cell[2444, 89, 617, 19, 111, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3098, 113, 304, 7, 91, "Subsection"],
+Cell[3405, 122, 96, 1, 35, "Input"],
+Cell[CellGroupData[{
+Cell[3526, 127, 344, 11, 35, "Input"],
+Cell[3873, 140, 595, 22, 53, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4517, 168, 182, 2, 46, "Subsection"],
+Cell[CellGroupData[{
+Cell[4724, 174, 1061, 29, 102, "Input"],
+Cell[5788, 205, 2268, 44, 302, "Output"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

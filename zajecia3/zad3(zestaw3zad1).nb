@@ -1,0 +1,220 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      7095,        211]
+NotebookOptionsPosition[      6132,        174]
+NotebookOutlinePosition[      6476,        189]
+CellTagsIndexPosition[      6433,        186]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{"ClearAll", "[", "\"\<Global`*\>\"", "]"}], ";"}], 
+  TraditionalForm]], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"318.35", "*", "Mz"}], " ", "=", " ", "Mc"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"11.27", "*", "Rz"}], " ", "=", " ", "Rc"}], "\[IndentingNewLine]", 
+ RowBox[{"Qz", "=", 
+  RowBox[{"G", "*", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"m", " ", "*", " ", "Mz"}], ")"}], "/", 
+    RowBox[{"(", 
+     RowBox[{"Rz", "^", "2"}], ")"}]}]}]}]}], "Input",
+ CellChangeTimes->{{3.721538569976847*^9, 3.721538616636529*^9}, {
+  3.721538870576175*^9, 3.7215388872994046`*^9}, {3.7215390994285774`*^9, 
+  3.7215391269002256`*^9}, {3.7215392132307773`*^9, 3.7215392537752485`*^9}, {
+  3.7215394407123775`*^9, 3.7215394777000422`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Set", "::", "write"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Tag \[NoBreak]\\!\\(Times\\)\[NoBreak] in \
+\[NoBreak]\\!\\(318.35`\\\\ Mz\\)\[NoBreak] is Protected. \\!\\(\\*ButtonBox[\
+\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/write\\\", ButtonNote -> \
+\\\"Set::write\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.7215394435671825`*^9, 3.7215394795876455`*^9}],
+
+Cell[BoxData["Mc"], "Output",
+ CellChangeTimes->{
+  3.7215388984066243`*^9, 3.721538940869899*^9, 3.721538971711153*^9, 
+   3.7215390434868793`*^9, 3.7215390799441433`*^9, 3.721539128975029*^9, {
+   3.7215392287216043`*^9, 3.7215392550544505`*^9}, {3.72153931118055*^9, 
+   3.721539323088971*^9}, 3.7215394435671825`*^9, 3.7215394795876455`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Set", "::", "write"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Tag \[NoBreak]\\!\\(Times\\)\[NoBreak] in \
+\[NoBreak]\\!\\(11.27`\\\\ Rz\\)\[NoBreak] is Protected. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/write\\\", \
+ButtonNote -> \\\"Set::write\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.7215394435671825`*^9, 3.7215394795876455`*^9}],
+
+Cell[BoxData["Rc"], "Output",
+ CellChangeTimes->{
+  3.7215388984066243`*^9, 3.721538940869899*^9, 3.721538971711153*^9, 
+   3.7215390434868793`*^9, 3.7215390799441433`*^9, 3.721539128975029*^9, {
+   3.7215392287216043`*^9, 3.7215392550544505`*^9}, {3.72153931118055*^9, 
+   3.721539323088971*^9}, 3.7215394435671825`*^9, 3.7215394795876455`*^9}],
+
+Cell[BoxData[
+ FractionBox[
+  RowBox[{"G", " ", "m", " ", "Mz"}], 
+  SuperscriptBox["Rz", "2"]]], "Output",
+ CellChangeTimes->{
+  3.7215388984066243`*^9, 3.721538940869899*^9, 3.721538971711153*^9, 
+   3.7215390434868793`*^9, 3.7215390799441433`*^9, 3.721539128975029*^9, {
+   3.7215392287216043`*^9, 3.7215392550544505`*^9}, {3.72153931118055*^9, 
+   3.721539323088971*^9}, 3.7215394435671825`*^9, 3.7215394795876455`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ FractionBox[
+  RowBox[{"G", " ", "*", "m", "*", " ", "Mz"}], 
+  SuperscriptBox["Rz", "2"]]], "Input",
+ CellChangeTimes->{{3.721538891495812*^9, 3.7215388924162135`*^9}}],
+
+Cell[BoxData[
+ FractionBox[
+  RowBox[{"G", " ", "m", " ", "Mz"}], 
+  SuperscriptBox["Rz", "2"]]], "Output",
+ CellChangeTimes->{
+  3.721538898422224*^9, 3.721538940885499*^9, 3.721538971742353*^9, 
+   3.721539043502479*^9, 3.721539079975343*^9, 3.7215391290062294`*^9, {
+   3.7215392287528048`*^9, 3.7215392550700507`*^9}, {3.7215393112105503`*^9, 
+   3.721539323104571*^9}, 3.7215394435827823`*^9, 3.7215394796032457`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{"Qc", " ", "=", " ", 
+   RowBox[{"G", " ", "*", " ", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"m", " ", "*", " ", "Mc"}], ")"}], "/", " ", 
+     RowBox[{"(", 
+      RowBox[{"Rc", "^", "2"}], ")"}]}]}]}]}]], "Input",
+ CellChangeTimes->{{3.7215386371973653`*^9, 3.7215386609094067`*^9}}],
+
+Cell[BoxData[
+ FractionBox[
+  RowBox[{"G", " ", "m", " ", "Mc"}], 
+  SuperscriptBox["Rc", "2"]]], "Output",
+ CellChangeTimes->{
+  3.7215388984534245`*^9, 3.7215389409166985`*^9, 3.7215389717579527`*^9, 
+   3.721539043533679*^9, 3.721539079990943*^9, 3.721539129037429*^9, {
+   3.721539228784004*^9, 3.7215392551012506`*^9}, {3.72153931123055*^9, 
+   3.7215393231201706`*^9}, 3.721539443613982*^9, 3.7215394796344457`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ FractionBox[
+  RowBox[{"G", " ", "*", "m", "*", " ", "Mc"}], 
+  SuperscriptBox["Rc", "2"]]], "Input",
+ CellChangeTimes->{{3.7215388958638196`*^9, 3.7215388969090214`*^9}}],
+
+Cell[BoxData[
+ FractionBox[
+  RowBox[{"G", " ", "m", " ", "Mc"}], 
+  SuperscriptBox["Rc", "2"]]], "Output",
+ CellChangeTimes->{
+  3.7215388984690247`*^9, 3.7215389409322987`*^9, 3.721538971773553*^9, 
+   3.721539043549279*^9, 3.7215390800221434`*^9, 3.721539129053029*^9, {
+   3.7215392287996044`*^9, 3.721539255116851*^9}, {3.7215393112605505`*^9, 
+   3.721539323151371*^9}, 3.7215394436451826`*^9, 3.7215394796500454`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Qc", "/", "Qz"}]], "Input",
+ CellChangeTimes->{{3.7215390254688473`*^9, 3.7215390780565395`*^9}, {
+  3.7215392932277174`*^9, 3.7215393211545672`*^9}, {3.721539422803546*^9, 
+  3.7215394287627563`*^9}}],
+
+Cell[BoxData[
+ FractionBox[
+  RowBox[{"Mc", " ", 
+   SuperscriptBox["Rz", "2"]}], 
+  RowBox[{"Mz", " ", 
+   SuperscriptBox["Rc", "2"]}]]], "Output",
+ CellChangeTimes->{3.7215393231669707`*^9, 3.7215394436607823`*^9, 
+  3.721539479681246*^9}]
+}, Open  ]]
+},
+WindowSize->{707, 867},
+WindowMargins->{{Automatic, 361}, {Automatic, 51}},
+FrontEndVersion->"8.0 for Microsoft Windows (64-bit) (October 6, 2011)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 127, 4, 30, "Input"],
+Cell[CellGroupData[{
+Cell[709, 28, 665, 15, 72, "Input"],
+Cell[1377, 45, 502, 10, 21, "Message"],
+Cell[1882, 57, 345, 5, 30, "Output"],
+Cell[2230, 64, 501, 10, 21, "Message"],
+Cell[2734, 76, 345, 5, 30, "Output"],
+Cell[3082, 83, 423, 8, 47, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3542, 96, 184, 4, 47, InheritFromParent],
+Cell[3729, 102, 422, 8, 47, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4188, 115, 348, 9, 52, "Input"],
+Cell[4539, 126, 421, 8, 47, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4997, 139, 186, 4, 47, InheritFromParent],
+Cell[5186, 145, 424, 8, 47, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5647, 158, 225, 4, 31, "Input"],
+Cell[5875, 164, 241, 7, 51, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

@@ -1,0 +1,299 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      8760,        289]
+NotebookOptionsPosition[      7763,        251]
+NotebookOutlinePosition[      8210,        269]
+CellTagsIndexPosition[      8167,        266]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[TextData[{
+ StyleBox["Wprowadzenie wartosci dla czasu ruchu rakiety ( \"",
+  FontColor->RGBColor[0, 0, 1]],
+ Cell[BoxData[
+  FormBox["t", TraditionalForm]]],
+ StyleBox["\" ), szybkosci spalania paliwa ( \"\[Mu]\" ) \ni przyspieszenia \
+ziemskiego ( \"",
+  FontColor->RGBColor[0, 0, 1]],
+ "g",
+ StyleBox["\" ).",
+  FontColor->RGBColor[0, 0, 1]]
+}], "Subsection",
+ PageWidth->Infinity,
+ ImageRegion->{{0, 1}, {0, 1}},
+ FontColor->RGBColor[0, 0, 1]],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{"ClearAll", "[", "\"\<Global`*\>\"", "]"}], ";"}], 
+  TraditionalForm]], "Input"],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{"t", "=", "5"}], ";"}], "             ", 
+   StyleBox[
+    RowBox[{"(*", " ", "s", " ", "*)"}],
+    FontColor->GrayLevel[0.666667]]}], TraditionalForm]], "Input"],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{"\[Mu]", "=", "0.1"}], ";"}], "       ", 
+   StyleBox[
+    RowBox[{"(*", " ", 
+     FractionBox[
+      StyleBox["kg",
+       FontColor->GrayLevel[0.666667]], "s"], " ", "*)"}],
+    FontColor->GrayLevel[0.666667]]}], TraditionalForm]], "Input"],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{"g", "=", "9.81"}], ";"}], "     ", 
+   StyleBox[
+    RowBox[{"(*", " ", 
+     FractionBox[
+      StyleBox["m",
+       FontColor->GrayLevel[0.666667]], 
+      SuperscriptBox["s", "2"]], " ", "*)"}],
+    FontColor->GrayLevel[0.666667]]}], TraditionalForm]], "Input"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ StyleBox["Wprowadzenie wzorow na mase spalin wyrzuconych w czasie \"t\" ( \"",
+  FontColor->RGBColor[0, 0, 1]],
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["m", "s"], TraditionalForm]]],
+ StyleBox["\" ), sile grawitacji \ndzialajaca na rakiete podczas ruchu ( \"",
+  FontColor->RGBColor[0, 0, 1]],
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["F", "g"], TraditionalForm]]],
+ StyleBox["\" ) i sile ciagu rakiety ( \"",
+  FontColor->RGBColor[0, 0, 1]],
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["F", "c"], TraditionalForm]]],
+ StyleBox["\" ). Symbole \"m\" \ni \"v\" oznaczaja odpowiednio mase \
+poczatkowa rakiety i szybkosc wylatujacych spalin.",
+  FontColor->RGBColor[0, 0, 1]]
+}], "Subsection",
+ PageWidth->Infinity,
+ ImageRegion->{{0, 1}, {0, 1}},
+ FontColor->RGBColor[0, 0, 1]],
+
+Cell[BoxData[
+ FormBox[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     RowBox[{"ms", "=", 
+      RowBox[{"\[Mu]", "\[Times]", "t"}]}], ";"}], "\n", 
+    FormBox[
+     RowBox[{
+      RowBox[{"Fg", "=", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"m", "-", "ms"}], ")"}], "\[Times]", "g"}]}], ";", "\n", 
+      RowBox[{"Fc", "=", 
+       RowBox[{"\[Mu]", "\[Times]", "v"}]}], ";"}],
+     TraditionalForm]}],
+   TraditionalForm], TraditionalForm]], "Input"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ StyleBox["Zastosowanie drugiej zasady dynamiki do obliczenia przyspieszenia \
+rakiety ( \"",
+  FontColor->RGBColor[0, 0, 1]],
+ Cell[BoxData[
+  FormBox["a", TraditionalForm]]],
+ StyleBox["\" ) dla \nczasu trwania ruchu t = 5 s.",
+  FontColor->RGBColor[0, 0, 1]]
+}], "Subsection",
+ PageWidth->Infinity,
+ ImageRegion->{{0, 1}, {0, 1}},
+ FontColor->RGBColor[0, 0, 1]],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{"A", "=", 
+    RowBox[{"Solve", "[", " ", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"m", "-", "ms"}], ")"}], "\[Times]", "a"}], "==", 
+       RowBox[{"Fc", "-", "Fg"}]}], ",", "a"}], "]"}]}], ";"}], 
+  TraditionalForm]], "Input"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[StyleBox["Sporzadzenie wykresu obrazujacego zaleznosc \
+przyspieszenia rakiety od szybkosci wylatujacych spalin dla poczatkowej masy \
+rakiety rownej 1 kg.",
+ FontColor->RGBColor[0, 0, 1]]], "Subsection",
+ FontColor->RGBColor[0, 0, 1]],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"rys1", "=", 
+   RowBox[{"Plot", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"a", "/.", "A"}], "/.", 
+      RowBox[{"m", "\[Rule]", "1"}]}], ",", 
+     RowBox[{"{", 
+      RowBox[{"v", ",", "100", ",", "150"}], "}"}], ",", 
+     RowBox[{"TextStyle", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"FontFamily", "\[Rule]", "\"\<Times\>\""}], ",", 
+        RowBox[{"FontSlant", "\[Rule]", "\"\<Italic\>\""}], ",", 
+        RowBox[{"FontSize", "\[Rule]", "12"}]}], "}"}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"PlotLabel", "\[Rule]", 
+      RowBox[{"StyleForm", "[", 
+       RowBox[{"\"\<     m = 1 kg  \>\"", ",", 
+        RowBox[{"FontFamily", "\[Rule]", "\"\<Helvetica\>\""}], ",", 
+        RowBox[{"FontSlant", "\[Rule]", "\"\<Plain\>\""}], ",", 
+        RowBox[{"FontWeight", "\[Rule]", "\"\<Bold\>\""}], ",", 
+        RowBox[{"FontSize", "\[Rule]", "12"}]}], "]"}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"PlotStyle", "\[Rule]", 
+      RowBox[{"(", "\[NoBreak]", GridBox[{
+         {
+          RowBox[{"RGBColor", "[", 
+           RowBox[{"1", ",", "0", ",", "0"}], "]"}], 
+          RowBox[{"Thickness", "[", "0.006", "]"}]}
+        }], "\[NoBreak]", ")"}]}], ",", 
+     RowBox[{"AxesLabel", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+       "\"\<v [\!\(\*FractionBox[\(m\), \(s\)]\)]\>\"", ",", 
+        "\"\<a [\!\(\*FractionBox[\(m\), SuperscriptBox[\(s\), \(2\)]]\)] \
+\>\""}], "}"}]}]}], "]"}]}], TraditionalForm]], "Input",
+ CellChangeTimes->{3.6205670433635564`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[StyleBox["Sporzadzenie wykresu obrazujacego zaleznosc \
+przyspieszenia rakiety od szybkosci wylatujacych spalin dla poczatkowej masy \
+rakiety rownej 1.5 kg.",
+ FontColor->RGBColor[0, 0, 1]]], "Subsection",
+ FontColor->RGBColor[0, 0, 1]],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"rys1", "=", 
+   RowBox[{"Plot", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"a", "/.", "A"}], "/.", 
+      RowBox[{"m", "\[Rule]", "1.5"}]}], ",", 
+     RowBox[{"{", 
+      RowBox[{"v", ",", "100", ",", "150"}], "}"}], ",", 
+     RowBox[{"TextStyle", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"FontFamily", "\[Rule]", "\"\<Times\>\""}], ",", 
+        RowBox[{"FontSlant", "\[Rule]", "\"\<Italic\>\""}], ",", 
+        RowBox[{"FontSize", "\[Rule]", "12"}]}], "}"}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"PlotLabel", "\[Rule]", 
+      RowBox[{"StyleForm", "[", 
+       RowBox[{"\"\<     m = 1.5 kg  \>\"", ",", 
+        RowBox[{"FontFamily", "\[Rule]", "\"\<Helvetica\>\""}], ",", 
+        RowBox[{"FontSlant", "\[Rule]", "\"\<Plain\>\""}], ",", 
+        RowBox[{"FontWeight", "\[Rule]", "\"\<Bold\>\""}], ",", 
+        RowBox[{"FontSize", "\[Rule]", "12"}]}], "]"}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"PlotStyle", "\[Rule]", 
+      RowBox[{"(", "\[NoBreak]", GridBox[{
+         {
+          RowBox[{"RGBColor", "[", 
+           RowBox[{"1", ",", "0", ",", "0"}], "]"}], 
+          RowBox[{"Thickness", "[", "0.006", "]"}]}
+        }], "\[NoBreak]", ")"}]}], ",", 
+     RowBox[{"AxesLabel", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+       "\"\<v [\!\(\*FractionBox[\(m\), \(s\)]\)]\>\"", ",", 
+        "\"\<a [\!\(\*FractionBox[\(m\), SuperscriptBox[\(s\), \(2\)]]\)] \
+\>\""}], "}"}]}]}], "]"}]}], TraditionalForm]], "Input",
+ CellChangeTimes->{3.620567046109161*^9}]
+}, Open  ]]
+},
+WindowSize->{1264, 889},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+DockedCells->FEPrivate`FrontEndResource[
+ "FEExpressions", "CompatibilityToolbar"],
+Magnification->1.25,
+FrontEndVersion->"8.0 for Microsoft Windows (64-bit) (October 6, 2011)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 451, 14, 69, "Subsection"],
+Cell[1033, 38, 127, 4, 35, "Input"],
+Cell[1163, 44, 221, 7, 35, "Input"],
+Cell[1387, 53, 302, 10, 48, "Input"],
+Cell[1692, 65, 324, 11, 44, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2053, 81, 793, 22, 94, "Subsection"],
+Cell[2849, 105, 460, 16, 80, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3346, 126, 380, 11, 69, "Subsection"],
+Cell[3729, 139, 318, 11, 35, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4084, 155, 249, 4, 69, "Subsection"],
+Cell[4336, 161, 1559, 38, 116, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5932, 204, 251, 4, 69, "Subsection"],
+Cell[6186, 210, 1561, 38, 116, "Input"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

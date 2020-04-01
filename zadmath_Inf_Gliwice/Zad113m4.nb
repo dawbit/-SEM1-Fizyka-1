@@ -1,0 +1,388 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     13092,        378]
+NotebookOptionsPosition[     11985,        335]
+NotebookOutlinePosition[     12432,        353]
+CellTagsIndexPosition[     12389,        350]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[TextData[{
+ StyleBox["Wprowadzenie wartosci dla czasu zycia mionu  w ukladzie \
+spoczynkowym (zwiazanym z mionem) (\"",
+  FontColor->RGBColor[0, 0, 1]],
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[Tau]", "o"], TraditionalForm]]],
+ StyleBox["\")\n oraz dla  predkosci swiatla w prozni.",
+  FontColor->RGBColor[0, 0, 1]]
+}], "Subsection",
+ PageWidth->Infinity,
+ ImageRegion->{{0, 1}, {0, 1}},
+ FontColor->RGBColor[0, 0, 1]],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{"ClearAll", "[", "\"\<Global`*\>\"", "]"}], ";"}], 
+  TraditionalForm]], "Input"],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{"\[Tau]o", "=", 
+     RowBox[{"2.6", "\[Times]", 
+      SuperscriptBox["10", 
+       RowBox[{"-", "8"}]]}]}], ";"}], "   ", 
+   StyleBox[
+    RowBox[{"(*", " ", "s", " ", "*)"}],
+    FontColor->GrayLevel[0.666667]]}], TraditionalForm]], "Input"],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{"c", "=", 
+     RowBox[{"3", "\[Times]", 
+      SuperscriptBox["10", "8"]}]}], ";"}], "             ", 
+   StyleBox[
+    RowBox[{"(*", " ", 
+     FractionBox["m", 
+      RowBox[{"s", " "}]], " ", "*)"}],
+    FontColor->GrayLevel[0.666667]]}], TraditionalForm]], "Input"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ StyleBox["Wprowadzenie wzoru na czasu zycia mionu  w ukladzie zwiazanym z \
+Ziemia (\"",
+  FontColor->RGBColor[0, 0, 1]],
+ Cell[BoxData[
+  FormBox["\[Tau]", TraditionalForm]]],
+ StyleBox["\"). Symbol \"v\" oznacza \npredkosc mionu mierzona wzgledem \
+Ziemi.",
+  FontColor->RGBColor[0, 0, 1]]
+}], "Subsection",
+ PageWidth->Infinity,
+ ImageRegion->{{0, 1}, {0, 1}},
+ FontColor->RGBColor[0, 0, 1]],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{"\[Tau]", "=", 
+    FractionBox["\[Tau]o", 
+     SqrtBox[
+      RowBox[{"1", "-", 
+       FractionBox[
+        SuperscriptBox["v", "2"], 
+        SuperscriptBox["c", "2"]]}]]]}], ";"}], TraditionalForm]], "Input"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ StyleBox["Wprowadzenie wzorow na zasieg mionu  liczony klasycznie (\"",
+  FontColor->RGBColor[0, 0, 1]],
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["S", "k"], "[", "v_", "]"}], TraditionalForm]]],
+ StyleBox["\") i relatywistycznie (\"",
+  FontColor->RGBColor[0, 0, 1]],
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["S", "r"], "[", "v_", "]"}], TraditionalForm]]],
+ StyleBox["\").",
+  FontColor->RGBColor[0, 0, 1]]
+}], "Subsection",
+ PageWidth->Infinity,
+ ImageRegion->{{0, 1}, {0, 1}},
+ FontColor->RGBColor[0, 0, 1]],
+
+Cell[BoxData[{
+ FormBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{"Sk", "[", "v_", "]"}], "=", 
+    RowBox[{"v", "\[Times]", "\[Tau]o"}]}], ";"}], 
+  TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{"Sr", "[", "v_", "]"}], "=", 
+    RowBox[{"v", "\[Times]", "\[Tau]"}]}], ";"}], TraditionalForm]}], "Input"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[StyleBox["Sporzadzenie wykresu obrazujacego zaleznosc zasiegu \
+mionu liczonego klasycznie od predkosci mionu \nmierzonej wzgledem Ziemi.",
+ FontColor->RGBColor[0, 0, 1]]], "Subsection",
+ FontColor->RGBColor[0, 0, 1]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"Plot", "[", 
+   RowBox[{
+    RowBox[{"Sk", "[", 
+     RowBox[{"v", "\[Times]", 
+      SuperscriptBox["10", "8"]}], "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"v", ",", 
+      RowBox[{"0.990", "\[Times]", "c", "\[Times]", 
+       SuperscriptBox["10", 
+        RowBox[{"-", "8"}]]}], ",", 
+      RowBox[{"0.999", "\[Times]", "c", "\[Times]", 
+       SuperscriptBox["10", 
+        RowBox[{"-", "8"}]]}]}], "}"}], ",", "\[IndentingNewLine]", 
+    RowBox[{"TextStyle", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"FontFamily", "\[Rule]", "\"\<Times\>\""}], ",", 
+       RowBox[{"FontSlant", "\[Rule]", "\"\<Italic\>\""}], ",", 
+       RowBox[{"FontSize", "\[Rule]", "12"}]}], "}"}]}], ",", 
+    "\[IndentingNewLine]", " ", 
+    RowBox[{"PlotStyle", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"RGBColor", "[", 
+         RowBox[{"1", ",", "0", ",", "0"}], "]"}], ",", 
+        RowBox[{"Thickness", "[", "0.006", "]"}]}], "}"}], "}"}]}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"AxesLabel", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{
+      "\"\<v [\!\(\*SuperscriptBox[\(10\), \(\(\\\ \)\(8\)\)]\) \
+\!\(\*FractionBox[\(m\), \(s\)]\)]\>\"", ",", 
+       "\"\<\!\(\*SubscriptBox[\(S\), \(k\)]\)  [m]\>\""}], "}"}]}]}], "]"}], 
+  TraditionalForm]], "Input",
+ CellChangeTimes->{3.6205673708705273`*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{{}, {}, 
+   {RGBColor[1, 0, 0], Thickness[0.006], LineBox[CompressedData["
+1:eJwV0n0w1HkYAHAv6Slrh3JK0u+72l68TBPNpNxV94jbrsZbdchbd+LcXevI
+VlOdi5L2OjY7wlBXjVzEFl3UIDQ4lbeMWMpLec17YYklcc/98cwzn3lmnpnn
+xexI6IEftTQ0NJwp/s/JvV/5yssBp0/2Tx/s4TBq3d28BLKiu+K6Fzk40ISX
+QvZyTbP/noy96sJU8mNzv9ij5KGeRytzyRFtDdx58o6ezY1Ksqb9k29yyN1d
+wn0m/wLq6SUlLOnlcFMHb3s6eW3a7s0lZG6R0fGGCkCfi3WVjn0c7q9oyh9+
+CqjtNBeS28+hcFZ4euEZ4Gz8pwHjQap73022rARcJLd6emOIw1L3oVL7KsDf
+Qj9nLxnhMDb8yN5j1YBaoDET/57Djyt+dr5aA9iyRrnyi1EObzmv98mpBeSM
+9zn8PsZhZs7qytYXgCeqxuq1VByOK6p2TdQBfnnYThw6wWGLqY7N4npAF8nB
+FuUkh6aFZ6KsXwJKdt7MOjRF/cbS34gaAHVGYqTl0xyeP8BLOdEImLU/8+m+
+GQ41LedfXFcC/mWb/LpmlsPy65n8B02Ac/Mb1VvmOOywk91rbwY8FjF4puAz
+hzslG90nXwG6dTktWbfA4bTyk6+wBdD+U6c6W4OhW7Zfp1Mr4PlEUYm1FsNh
+walfj7QB2ixzibuqzbDrSZWXvB1w3FFaJtBhaKxudM18Ayjw/UEzbjHD0Qxx
+WdFbwBsqntEkMDQ7t+NKXwegFQ7EnF7KMGmyIvhzJ6BFWBC/R5dhYII0w6ob
+cKuXkUqsx7DxTpPPdz2ACaVJivd8hhc8201+6QU8zCsIdddnKLcxtUt6R/vj
+85LbDBi2Zxj6Z/cBRqsWqvcsZ1gVn7KotB+QeT5ruGfIcNkdDxgaAKySlOyw
+NmJ4zbPWUGMIsDvMI+/qCoaRW8IjNw3T/5gLZGbGDNMzuyZFI4DpZbFh8lUM
+xYlN77zfA8a2VlpOmTCUKbRspR8AoxS2onBTmtenX35jFHDYTxTSt4Zh9jad
+vbVjgP6VUnUoY8j785+zH8dp3twUD5WAoeKkYbHuBKBfpFOZ91qGt2X3vbZN
+Av6tbRPXJWTYuUtb0+0joKc4/yeX9QyLgnqFAVOA3gf0jR5uYKgqmE+/PA0Y
+Mpa8brs5w6MZ9Ta31XSPsHJMs6D+Pon8LPK0w534TPKwwaHBbPKCkaw7hxwc
+3pGaT+Y/do8uIoe4fdCvIZtrDT5XkiWzvA/jZP8r+q5gyTDcZY/i6xlAZa6v
+XzC5WJsndSS3R9vnSMhzBXX+e8ndHhsWTpMjhB6rDpLHZkdTL5LPqQMvBZH5
+Dhd6b5Kj06KCLpNFjVnil+QKT9HuK2Tn9LjiV2Qdvi6XTHY/dZz/liw9Fd+U
+SvZfvfP+EPmSU6rjQ3JEQL1K24phpWagoJAcvfWRgy55af7GuRKyDK4lGpBj
+zO7nPSdfuxtgu4Zc3SyR15Jvnf32DyGZJ7MVvyRnuW56bUF2sp8VNZMfmC23
+sCbLpkrWtpHzJ6bO2JL/A37eF7Q=
+     "]]}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->True,
+  AxesLabel->{
+    FormBox[
+    "\"v [\\!\\(\\*SuperscriptBox[\\(10\\), \\(\\(\\\\ \\)\\(8\\)\\)]\\) \
+\\!\\(\\*FractionBox[\\(m\\), \\(s\\)]\\)]\"", TraditionalForm], 
+    FormBox[
+    "\"\\!\\(\\*SubscriptBox[\\(S\\), \\(k\\)]\\)  [m]\"", TraditionalForm]},
+  AxesOrigin->{2.97, 7.722},
+  BaseStyle->{FontFamily -> "Times", FontSlant -> "Italic", FontSize -> 12},
+  PlotRange->{{2.97, 2.997}, {7.7220000014326535`, 7.792199998567347}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{
+    Scaled[0.02], 
+    Scaled[0.02]}]], "Output",
+ CellChangeTimes->{3.689932051923443*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[StyleBox["Sporzadzenie wykresu obrazujacego zaleznosc zasiegu \
+mionu liczonego relatywistycznie od predkosci mionu \nmierzonej wzgledem \
+Ziemi.",
+ FontColor->RGBColor[0, 0, 1]]], "Subsection",
+ FontColor->RGBColor[0, 0, 1]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"Plot", "[", 
+   RowBox[{
+    RowBox[{"Sr", "[", 
+     RowBox[{"v", "\[Times]", 
+      SuperscriptBox["10", "8"]}], "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"v", ",", 
+      RowBox[{"0.990", "\[Times]", "c", "\[Times]", 
+       SuperscriptBox["10", 
+        RowBox[{"-", "8"}]]}], ",", 
+      RowBox[{"0.999", "\[Times]", "c", "\[Times]", 
+       SuperscriptBox["10", 
+        RowBox[{"-", "8"}]]}]}], "}"}], ",", "\[IndentingNewLine]", 
+    RowBox[{"TextStyle", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"FontFamily", "\[Rule]", "\"\<Times\>\""}], ",", 
+       RowBox[{"FontSlant", "\[Rule]", "\"\<Italic\>\""}], ",", 
+       RowBox[{"FontSize", "\[Rule]", "12"}]}], "}"}]}], ",", 
+    "\[IndentingNewLine]", " ", 
+    RowBox[{"PlotStyle", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"RGBColor", "[", 
+         RowBox[{"1", ",", "0", ",", "0"}], "]"}], ",", 
+        RowBox[{"Thickness", "[", "0.006", "]"}]}], "}"}], "}"}]}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"AxesLabel", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{
+      "\"\<v [\!\(\*SuperscriptBox[\(10\), \(\(\\\ \)\(8\)\)]\) \
+\!\(\*FractionBox[\(m\), \(s\)]\)]\>\"", ",", 
+       "\"\<\!\(\*SubscriptBox[\(S\), \(r\)]\)  [m]\>\""}], "}"}]}]}], "]"}], 
+  TraditionalForm]], "Input",
+ CellChangeTimes->{3.620567373553732*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{{}, {}, 
+   {RGBColor[1, 0, 0], Thickness[0.006], LineBox[CompressedData["
+1:eJwV0nk4FGgcB/CheJ/Mpi2bRWrZ6bYdlg4d+lZ2oplhXOMKcyopFVp5bCVb
+UmFKSrUqKnKEji2slFA5xrGOEaZQYpdIhSbU7tsf7/M+nz9+7/P7fX+vqXiX
+k0yTwWBI6fl6J3at3iIvISAzfmHc9uEgcnbWndPUxlZTfLJ9OdghNWKeow77
+zleZLuQAXeqCZGqd0iv6yWIOel/d/f42NWv3WqXcj4M1r5Y0NFLP29XuGhLI
+wctO1majUoL057r7HA9wsKiduTKVmrtY4ep9iYNZE6cH15cR/MU2cvJ4zYFj
+WVNe32OChKE39XELuGCNsvb994TAPzzV2jmQC0fPrMSF5QR69gct5xZyUeza
+W7y+gqD+Qq01U4uHE+Fiu92VBCHKFYOpbjwM62/jna8ieLph+/iuLB5SeHO8
+chQEwpQ4hek4D+k5M8pbq2m/vvPPxwns8S6zwvpDDUHs07qC9mx7tBhrmWvX
+EbiRWksPbQcYF4RFLv2bQLCBqS72d0DKYOpzdj3B+60aF7srHHDIiXkupIHg
+ZVKwDZnBh8bCL9VJjQQm44fM1jrxUZKUPvlWE823vrTt4VE+2q1ibqiUNH/P
+nvjZZXysDZrnOtRM8GHVssMdX/j42Di2hdVCsOcBw8xuvSP42d4d3FaCBVVL
+6g4ccUSfSehOcRtB/pfaMO1yR3Q+qPCQqwjisyrvndJzgoG6wSH9OYH62R75
+SW8nvE0LeFT4gta7bTl5OcMJphFr4rvb6T4zZBb+DGecGSrb8bmDYJWtpsVj
+V2dIT0elmb0kOMudMjcizxkN15u8XF4ReJho/Wc90wW/u6mM/LsI2nkpL1oP
+uUBubmx15jWBl3p1d8uwC1RpeqLsboI7h86n2/u7ouLUuYnFPQS1Iw9sRztd
+MfW6gPT+QzA5I7aLGyjABTeFHqOXoCG0VdNkTICDP4cfXNRH8+L5JzGT3ZCa
+3jnEfkMQGJN2w2yTOwISml579hMsN59mM+eTO2IyNZdHDdD/8dD93/0KD7z1
+6pFffEvQNnbVsDLVE9krtOwUgwSRrZWmZlleYB67uX/4HcH8gAjd1VVbkLlX
+777OBwJ287Msg1FvXIvJ9VgxRKD8dXTVid2+6LCeoMEfJhg8srjEIlKIiNI4
+ngu1nebcT9FHhPjB1uiCO3Xpw1cWHdFC+DiaW4iory97dj9BLoRK4isLojYY
+cxLoXxSiObqwIoG6ZF/Rgf35QtTUB8e3UHeo2jT6BoUo9OtiSUbo+3b/dJZv
+E2Fi3ZvqrdT9sUsstXeKwLUaDt1Bvfme+BJ7jwgvmNqKvdRbF2ZU1IWJoHlr
+Xkg0tc7i3m6dEyLYjm0vy6Z+1FiVZZgjglL+TqqmHrIR2j8YEeF9/pfU2I8E
+M2deEc85LUY6YzEjnvp25VjL+0QxfGy9Pc9Shxps1ilLEqOyuVD3MjV7nX7G
+njQxUkb2hd6kttifuG20QAy+5QfbBuoF3cGCJ51i5OT29BmoCYLjn5nutJRA
++lGfPZOaFVRfVmglgdE6drIp9cfQW9W66ySIqrnmspD66tWjC0rsJPDuFxWt
+pp4u0c3z8ZXgGzNVnA91Ym51UcgJCban1Zlfo2687le9sUeCTK+EyRnUCu/4
+2ap+Cfq+df83mzriN7FO+JAEO8Lbk/OorTdfyVZoSBHIH5hS9bW/ZNPjxcZS
+BI0yB95RDwyqcoacpQi335S57hPB5/F7i14/leL+BGaUDXX3Tx2n/GqlGM+v
+EdlRz5201HBQKcUBlsDQmfresQDFjG4pItTSaD/q02kFAc0TZTh8JdIvlnql
+rfbG/o0ylLmxN8RT39WNM1RzZNCarDMrkZq1fmzqNy4yRIWeakqmrvljWo6D
+VIZobrLNn9QJPg6HNx2RoVxDalJAHabo9LgYK8OkvHnjRdQ5unad42dkOG6a
+e+cpdUzjCseWNBkqlUFyBbXw4VShIFcGZszygL+pffP9dj7Pk4G7fpSt/Dpv
+ZldMYLEMMSNFP7ZRXxvYVT+pQob/AXE74Oc=
+     "]]}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->True,
+  AxesLabel->{
+    FormBox[
+    "\"v [\\!\\(\\*SuperscriptBox[\\(10\\), \\(\\(\\\\ \\)\\(8\\)\\)]\\) \
+\\!\\(\\*FractionBox[\\(m\\), \\(s\\)]\\)]\"", TraditionalForm], 
+    FormBox[
+    "\"\\!\\(\\*SubscriptBox[\\(S\\), \\(r\\)]\\)  [m]\"", TraditionalForm]},
+  AxesOrigin->{2.97, 55.},
+  BaseStyle->{FontFamily -> "Times", FontSlant -> "Italic", FontSize -> 12},
+  PlotRange->{{2.97, 2.997}, {54.73980716108604, 174.28244897710567`}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{
+    Scaled[0.02], 
+    Scaled[0.02]}]], "Output",
+ CellChangeTimes->{3.689932052063843*^9}]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1264, 889},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+DockedCells->FEPrivate`FrontEndResource[
+ "FEExpressions", "CompatibilityToolbar"],
+Magnification->1.25,
+FrontEndVersion->"8.0 for Microsoft Windows (64-bit) (October 6, 2011)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 427, 12, 69, "Subsection"],
+Cell[1009, 36, 127, 4, 35, "Input"],
+Cell[1139, 42, 304, 10, 37, "Input"],
+Cell[1446, 54, 329, 11, 47, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1812, 70, 411, 12, 69, "Subsection"],
+Cell[2226, 84, 259, 9, 91, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2522, 98, 555, 18, 46, "Subsection"],
+Cell[3080, 118, 339, 11, 58, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3456, 134, 231, 3, 69, "Subsection"],
+Cell[CellGroupData[{
+Cell[3712, 141, 1393, 37, 136, "Input"],
+Cell[5108, 180, 2324, 45, 275, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7481, 231, 239, 4, 69, "Subsection"],
+Cell[CellGroupData[{
+Cell[7745, 239, 1391, 37, 136, "Input"],
+Cell[9139, 278, 2818, 53, 278, "Output"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

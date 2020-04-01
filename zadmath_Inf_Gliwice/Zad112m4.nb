@@ -1,0 +1,319 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      9387,        310]
+NotebookOptionsPosition[      8275,        268]
+NotebookOutlinePosition[      8722,        286]
+CellTagsIndexPosition[      8679,        283]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[TextData[{
+ StyleBox["Wypisanie wzorow na odleglosc czasoprzestrzenna dwoch wybuchow na \
+sloncu w ukladzie zwiazanym\n z Ziemia (\"",
+  FontColor->RGBColor[0, 0, 1]],
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[CapitalDelta]s", "1"], TraditionalForm]]],
+ StyleBox["\") i w ukladzie zwiazanym z rakieta (\"",
+  FontColor->RGBColor[0, 0, 1]],
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[CapitalDelta]s", "2"], TraditionalForm]]],
+ StyleBox["\"),  \"c\" - predkosc swiatla w prozni, \n \"",
+  FontColor->RGBColor[0, 0, 1]],
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[CapitalDelta]t", "1"], TraditionalForm]]],
+ ", ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[CapitalDelta]x", "1"], TraditionalForm]]],
+ StyleBox["\" - odleglosc czasowa i przestrzenna dwoch wybuchow na sloncu w \
+ukladzie zwiazanym\n z Ziemia,  \"",
+  FontColor->RGBColor[0, 0, 1]],
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[CapitalDelta]t", "2"], TraditionalForm]]],
+ ", ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[CapitalDelta]x", "2"], TraditionalForm]]],
+ StyleBox["\" - odleglosc czasowa i przestrzenna dwoch wybuchow na sloncu w \
+ukladzie zwiazanym\n z rakieta.",
+  FontColor->RGBColor[0, 0, 1]]
+}], "Subsection",
+ PageWidth->Infinity,
+ ImageRegion->{{0, 1}, {0, 1}},
+ FontColor->RGBColor[0, 0, 1]],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{"ClearAll", "[", "\"\<Global`*\>\"", "]"}], ";"}], 
+  TraditionalForm]], "Input"],
+
+Cell[BoxData[{
+ FormBox[
+  RowBox[{
+   RowBox[{"\[CapitalDelta]s1", "=", 
+    SqrtBox[
+     RowBox[{
+      RowBox[{
+       SuperscriptBox["c", "2"], "\[Times]", 
+       SuperscriptBox["\[CapitalDelta]t1", "2"]}], "-", 
+      SuperscriptBox["\[CapitalDelta]x1", "2"]}]]}], ";"}], 
+  TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+   RowBox[{"\[CapitalDelta]s2", "=", 
+    SqrtBox[
+     RowBox[{
+      RowBox[{
+       SuperscriptBox["c", "2"], "\[Times]", 
+       SuperscriptBox["\[CapitalDelta]t2", "2"]}], "-", 
+      SuperscriptBox["\[CapitalDelta]x2", "2"]}]]}], ";"}], 
+  TraditionalForm]}], "Input"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ StyleBox["Wprowadzenie wartosci dla odleglosci czasowej i przestrzennej \
+dwoch wybuchow na sloncu w ukladzie zwiazanym\n z Ziemia oraz dla ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox[" predkosci swiatla w prozni.",
+  FontColor->RGBColor[0, 0, 1]]
+}], "Subsection",
+ PageWidth->Infinity,
+ ImageRegion->{{0, 1}, {0, 1}},
+ FontColor->RGBColor[0, 0, 1]],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{"\[CapitalDelta]x1", "=", "0"}], ";"}], "      ", 
+   StyleBox[
+    RowBox[{"(*", " ", "m", " ", "*)"}],
+    FontColor->GrayLevel[0.666667]]}], TraditionalForm]], "Input"],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{"\[CapitalDelta]t1", "=", "10"}], ";"}], "    ", 
+   StyleBox[
+    RowBox[{"(*", " ", "s", " ", "*)"}],
+    FontColor->GrayLevel[0.666667]]}], TraditionalForm]], "Input"],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{"c", "=", 
+     RowBox[{"3", "\[Times]", 
+      SuperscriptBox["10", "8"]}]}], ";"}], "       ", 
+   StyleBox[
+    RowBox[{"(*", " ", 
+     FractionBox["m", 
+      RowBox[{"s", " "}]], " ", "*)"}],
+    FontColor->GrayLevel[0.666667]]}], TraditionalForm]], "Input"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[StyleBox["Rozwiazanie rownania bedacego matematycznym zapisem \
+rownosci odleglosci czasoprzestrzennej dwoch \nwybuchow w ukladzie zwiazanym \
+z Ziemia i w ukladzie zwiazanym z rakieta.",
+ FontColor->RGBColor[0, 0, 1]]], "Subsection",
+ FontColor->RGBColor[0, 0, 1]],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"r1", "=", 
+   RowBox[{"Solve", "[", 
+    RowBox[{
+     RowBox[{"\[CapitalDelta]s1", "==", "\[CapitalDelta]s2"}], ",", 
+     "\[CapitalDelta]x2"}], "]"}]}], TraditionalForm]], "Input"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[StyleBox["Sporzadzenie wykresu obrazujacego zaleznosc \
+odleglosci  przestrzennej dwoch wybuchow na sloncu w ukladzie zwiazanym z \
+rakieta od ich odleglosci czasowej w tym ukladzie.",
+ FontColor->RGBColor[0, 0, 1]]], "Subsection",
+ FontColor->RGBColor[0, 0, 1]],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"Plot", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"\[CapitalDelta]x2", "\[Times]", 
+      SuperscriptBox["10", 
+       RowBox[{"-", "3"}]]}], "/.", 
+     RowBox[{"r1", "[", 
+      RowBox[{"[", 
+       RowBox[{"2", ",", "1"}], "]"}], "]"}]}], ",", 
+    RowBox[{"{", 
+     RowBox[{"\[CapitalDelta]t2", ",", "10.5", ",", "11.5"}], "}"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"TextStyle", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"FontFamily", "\[Rule]", "\"\<Times\>\""}], ",", 
+       RowBox[{"FontSlant", "\[Rule]", "\"\<Italic\>\""}], ",", 
+       RowBox[{"FontSize", "\[Rule]", "12"}]}], "}"}]}], ",", 
+    "\[IndentingNewLine]", " ", 
+    RowBox[{"PlotStyle", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"RGBColor", "[", 
+         RowBox[{"1", ",", "0", ",", "1"}], "]"}], ",", 
+        RowBox[{"Thickness", "[", "0.006", "]"}]}], "}"}], "}"}]}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"AxesLabel", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{
+      "\"\<\!\(\*SubscriptBox[\(\[CapitalDelta]t\), \(2\)]\) [s]\>\"", ",", 
+       "\"\<\!\(\*SubscriptBox[\(\[CapitalDelta]x\), \(2\)]\)  [km]\>\""}], 
+      "}"}]}]}], "]"}], TraditionalForm]], "Input",
+ CellChangeTimes->{
+  3.6205672877535825`*^9, {3.720161692426318*^9, 3.720161694579122*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[StyleBox["Wyznaczenie zaleznosci predkosci rakiety od \
+odleglosci czasoprzestrzennej dwoch wybuchow w ukladzie zwiazanym z rakieta \
+poprzez rozwiazanie rownania  bedacego matematycznym zapisem dylatacji czasu.",
+ FontColor->RGBColor[0, 0, 1]]], "Subsection",
+ FontColor->RGBColor[0, 0, 1]],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"r2", "=", 
+   RowBox[{"Solve", "[", 
+    RowBox[{
+     RowBox[{"\[CapitalDelta]t2", "==", 
+      FractionBox["\[CapitalDelta]t1", 
+       SqrtBox[
+        RowBox[{"1", "-", 
+         FractionBox[
+          SuperscriptBox["v", "2"], 
+          SuperscriptBox["c", "2"]]}]]]}], ",", "v"}], "]"}]}], 
+  TraditionalForm]], "Input"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[StyleBox["Sporzadzenie wykresu obrazujacego zaleznosc predkosci \
+rakiety od odleglosci  czasowej dwoch wybuchow na sloncu w ukladzie zwiazanym \
+z rakieta.",
+ FontColor->RGBColor[0, 0, 1]]], "Subsection",
+ FontColor->RGBColor[0, 0, 1]],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"Plot", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"v", "\[Times]", 
+      SuperscriptBox["10", 
+       RowBox[{"-", "3"}]]}], "/.", 
+     RowBox[{"r2", "[", 
+      RowBox[{"[", 
+       RowBox[{"2", ",", "1"}], "]"}], "]"}]}], ",", 
+    RowBox[{"{", 
+     RowBox[{"\[CapitalDelta]t2", ",", "10.5", ",", "11.5"}], "}"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"TextStyle", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"FontFamily", "\[Rule]", "\"\<Times\>\""}], ",", 
+       RowBox[{"FontSlant", "\[Rule]", "\"\<Italic\>\""}], ",", 
+       RowBox[{"FontSize", "\[Rule]", "12"}]}], "}"}]}], ",", 
+    "\[IndentingNewLine]", " ", 
+    RowBox[{"PlotStyle", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"RGBColor", "[", 
+         RowBox[{"1", ",", "0", ",", "0"}], "]"}], ",", 
+        RowBox[{"Thickness", "[", "0.006", "]"}]}], "}"}], "}"}]}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"AxesLabel", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{
+      "\"\<\[CapitalDelta]t [s]\>\"", ",", 
+       "\"\<v  [\!\(\*FractionBox[\(km\), \(s\)]\)]\>\""}], "}"}]}]}], "]"}], 
+  TraditionalForm]], "Input",
+ CellChangeTimes->{3.620567290514787*^9}]
+}, Open  ]]
+},
+WindowSize->{1264, 889},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+DockedCells->FEPrivate`FrontEndResource[
+ "FEExpressions", "CompatibilityToolbar"],
+Magnification->1.25,
+FrontEndVersion->"8.0 for Microsoft Windows (64-bit) (October 6, 2011)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 1289, 37, 135, "Subsection"],
+Cell[1871, 61, 127, 4, 35, "Input"],
+Cell[2001, 67, 619, 20, 82, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2657, 92, 369, 9, 69, "Subsection"],
+Cell[3029, 103, 230, 7, 35, "Input"],
+Cell[3262, 112, 229, 7, 35, "Input"],
+Cell[3494, 121, 323, 11, 47, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3854, 137, 279, 4, 69, "Subsection"],
+Cell[4136, 143, 218, 6, 35, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4391, 154, 276, 4, 69, "Subsection"],
+Cell[4670, 160, 1356, 36, 110, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6063, 201, 305, 4, 69, "Subsection"],
+Cell[6371, 207, 362, 12, 94, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6770, 224, 250, 4, 69, "Subsection"],
+Cell[7023, 230, 1236, 35, 140, "Input"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
